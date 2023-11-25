@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+      img{
+          width: 100px;
+      }
+      li:hover{
+          background-color: green;
+          height: 40px;
+      }
+      *{
+          list-style-type: none;
+      }
+      li{
+          background-color: black;
+          height: 40px;
+          margin: 1px;
+          padding: 10px;
+      }
+      a{
+          text-decoration: none;
+          color: white;
+      }
+      body{
+        margin: 100px;
+      }
+  </style>
+</head>
+<body>
+  <div class="d-flex justify-content-between">
+      <h3 style="color: gray; text-transform: uppercase;">Institut speciialse de technologie appliquee ait melloul</h3>
+      <img src="./logo.png" alt="not found">
+  </div>
+  <div class="d-flex justify-content-between">
+      <nav class="navbar">
+          <li><a href="#">Evaluation</a></li>
+          <li><a href="#">Avancement</a></li>
+          <li><a href="#">Changer EFP</a></li>
+          <li><a href="#">Mon Compte</a></li>
+          <li><a href="#">Déconnexion</a></li>
+      </nav>
+      <select name="ans" id="ans" class="h-25 mt-4">
+          <option>2000/2001</option>
+          <option>2001/2002</option>
+          <option>2002/2003</option>
+          <option>2003/2004</option>
+          <option>2004/2005</option>
+          <option>2005/2006</option>
+          <option>2006/2007</option>
+          <option>2007/2008</option>
+          <option>2008/2009</option>
+          <option>2009/2010</option>
+          <option>2010/2011</option>
+          <option>2011/2012</option>
+          <option>2012/2013</option>
+          <option>2013/2014</option>
+      </select>
+  </div>
+  <div class="bg-success w-100" style="height: 10px; margin-top: -10px;"></div>
+    <h4 style="text-transform: uppercase;" class="text-secondary">Cahier de textes &verbar;<span class="text-primary">Retour</span> </h4>
+    <hr>
+    <div class="row mx-5 my-3">
+        <label for="filiere" class="col-2">Fillière:</label>
+        <select name="fi" id="filliere" class="col-4">
+            <option>TS-infrasctructure digitale</option>
+            <option>TS-Développement Digital(Diplomante)</option>
+            <option>T-Agent Technique de Vente </option>
+            <option>T-Technicien Comptable d'Entreprises </option>
+            <option>T-Technicien en  Maintenance et Support Informatique et Réseaux </option>
+            <option>T-Technicien en  Peinture Automobile </option>
+            <option>T-Technicien Comptable d'Entreprises </option>
+            <option>T-Techniques Habillement Production </option>
+            <option>T-Maintenance Hôtelière</option>
+            <option>T-Technicien en  Modélisme Industriel </option>
+        </select>
+        <label for="Module" class="col-2">Module:</label>
+        <select name="fi" id="Module" class="col-4">
+            <option>EGTS101-Arabe</option>
+            <option>EGTS102-Français</option>
+            <option>EGTS103-Anglais technique/Espagnole</option>
+            <option>EGTS104-Culture entrepreneuriale</option>
+            <option>M102-Acquérir les bases de l’algorithmique</option>
+            <option>M103-Programmer en Orienté Objet</option>
+            <option>M104-Développer des sites web statiques</option>
+            <option>M105-Programmer en JavaScript</option>
+            <option>M106-Manipuler des bases de données</option>
+            <option>M107-Développer des sites web dynamiques</option>
+        </select>
+        <hr class="mt-5">
+    </div>
+    <h4 style="text-transform: uppercase;" class="text-secondary">Nouvelle séance</h4>
+    <div class="row my-3">
+        <label class="col-2">Elts de la compétence(objectifs)* 300 caractères:</label>
+        <textarea class="col-4"></textarea>
+        <label class="col-2">Type de cours:</label>
+        <select class="col-4 h-25">
+            <option>cours de matain</option>
+            <option>cours de soir</option>
+        </select>
+        <hr>
+    </div>
+    <div class="row my-3">
+        <label class="col-2">Date de la séance*:</label>
+        <input type="date" class="col-4">
+        <label class="col-2">Eff.Absents</label>
+        <select class="col-4 h-25">
+            <option>0 stagiaire</option>
+            <option>1 stagiaire</option>
+            <option>2 stagiaire</option>
+            <option>3 stagiaire</option>
+            <option>4 stagiaire</option>
+            <option>5 stagiaire</option>
+        </select>
+    </div>
+    <div class=" row my-3">
+        <label class="col-2">Heure Démmarage:</label>
+        <input type="datetime" class="col-4">
+        <label class="col-2">Heure Fin*:</label>
+       <input type="datetime" class="col-4">
+    </div>
+    <hr>
+    <div class="row my-3">
+        <label class="col-2">Commentaire:</label>
+        <textarea class="col-4"></textarea>
+        <label class="col-2">Liste Absents:</label>
+        <textarea class="col-4"></textarea>
+    </div>
+        <label>Type de Séance:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio"  name="Cours">Cours&nbsp;&nbsp;
+        <input type="radio"  name="Cours">CC &nbsp;&nbsp;
+        <input type="radio"  name="Cours">EFM <br><br>
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#m">Valider la séance</button>
+        <div id="m" class="modal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header ">
+                <h2 class="text-secondary">Nouvelle séance</h2>
+                <button class="btn-close btn-danger" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+               <form>
+                 <div><span class="fw-bold">Elts de la compétence</span>&colon;&nbsp;&nbsp;<span class="text-secondary">abc</span></div>
+                 <div><span class="fw-bold">Mode</span>&colon;&nbsp;&nbsp;<span class="text-secondary">Séance présentielle</span></div>
+                 <div><span class="fw-bold">Sous-Groupe</span>&colon;&nbsp;&nbsp;<span class="text-secondary">DEV101</span></div>
+                 <div><span class="fw-bold">Date de la séance</span>&colon;&nbsp;&nbsp;<span class="text-secondary">mardi. 10/01/2023</span></div>
+                 <div><span class="fw-bold">Heure Début</span>&colon;&nbsp;&nbsp;<span class="text-secondary">8:00</span></div>
+                 <div><span class="fw-bold">Heure Fin</span>&colon;&nbsp;&nbsp;<span class="text-secondary">8:30</span></div>
+                <div class="modal-footer my-3">
+                  <div class="mt-3">
+                    <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal"> <i class="fa fa-xmark"></i>  Annuler</button>
+                    <button class="btn btn-sm btn-primary" onclick="alert('vous etes sur de confirmer?')"> <i class="fa fa-check"></i> Confirmer</button>
+                    </div>
+                </div>
+              </form>
+            </div>
+</body>
+</html>
