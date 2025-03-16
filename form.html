@@ -3,162 +3,260 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Institut Specialisé de Technologie Appliquée</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-      img{
-          width: 100px;
+    .nav-item {
+      background-color: #212529;
+      margin: 2px;
+      transition: background-color 0.3s;
+    }
+    
+    .nav-item:hover {
+      background-color: #007380;
+    }
+    
+    .nav-link {
+      color: white !important;
+      padding: 10px 15px;
+    }
+    
+    .logo-img {
+      width: 100px;
+      height: auto;
+    }
+    
+    .header-title {
+      color: #bc451a;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    
+    .green-divider {
+      height: 10px;
+      background-color: #198754;
+      margin-bottom: 20px;
+    }
+    
+    body {
+      padding: 20px;
+    }
+    
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        align-items: center;
       }
-      li:hover{
-          background-color: rgb(0, 115, 128);
-          height: 40px;
+      
+      .nav-container {
+        flex-direction: column;
+        width: 100%;
       }
-      *{
-          list-style-type: none;
+      
+      .navbar-nav {
+        width: 100%;
       }
-      li{
-          background-color: black;
-          height: 40px;
-          margin: 1px;
-          padding: 10px;
-      }
-      a{
-          text-decoration: none;
-          color: white;
-      }
-      body{
-        margin: 100px;
-      }
+    }
   </style>
 </head>
 <body>
-  <div class="d-flex justify-content-between">
-      <h3 style="color: rgb(188, 69, 26); text-transform: uppercase;">Institut speciialse de technologie appliquee ait melloul</h3>
-      <img src="./logo.png" alt="not found">
-  </div>
-  <div class="d-flex justify-content-between">
-      <nav class="navbar">
-          <li><a href="#">Evaluation</a></li>
-          <li><a href="#">Avancement</a></li>
-          <li><a href="#">Changer EFP</a></li>
-          <li><a href="#">Mon Compte</a></li>
-          <li><a href="#">Déconnexion</a></li>
+  <div class="container">
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-3 header-container">
+      <h3 class="header-title">Institut Specialisé de Technologie Appliquée Ait Melloul</h3>
+      <img src="./logo.png" alt="Logo" class="logo-img">
+    </div>
+    
+    <!-- Navigation -->
+    <div class="d-flex justify-content-between mb-3 nav-container">
+      <nav class="navbar navbar-expand-lg p-0">
+        <div class="container-fluid p-0">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="#">Evaluation</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Avancement</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Changer EFP</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Mon Compte</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Déconnexion</a></li>
+            </ul>
+          </div>
+        </div>
       </nav>
-      <select name="ans" id="ans" class="h-25 mt-4">
-          <option>2000/2001</option>
-          <option>2001/2002</option>
-          <option>2002/2003</option>
-          <option>2003/2004</option>
-          <option>2004/2005</option>
-          <option>2005/2006</option>
-          <option>2006/2007</option>
-          <option>2007/2008</option>
-          <option>2008/2009</option>
-          <option>2009/2010</option>
-          <option>2010/2011</option>
-          <option>2011/2012</option>
-          <option>2012/2013</option>
-          <option>2013/2014</option>
+      <select class="form-select w-auto" aria-label="Year selection">
+        <option selected>2000/2001</option>
+        <option>2001/2002</option>
+        <option>2002/2003</option>
+        <option>2003/2004</option>
+        <option>2004/2005</option>
+        <option>2005/2006</option>
+        <option>2006/2007</option>
+        <option>2007/2008</option>
+        <option>2008/2009</option>
+        <option>2009/2010</option>
+        <option>2010/2011</option>
+        <option>2011/2012</option>
+        <option>2012/2013</option>
+        <option>2013/2014</option>
       </select>
+    </div>
+    
+    <!-- Green divider -->
+    <div class="green-divider"></div>
+    
+    <!-- Main content header -->
+    <div class="mb-4">
+      <h4 class="text-secondary text-uppercase">Cahier de textes <span class="text-dark">|</span> <span class="text-primary">Retour</span></h4>
+      <hr>
+    </div>
+    
+    <!-- Form sections -->
+    <div class="row mb-4">
+      <div class="col-md-6 mb-3">
+        <label for="filiere" class="form-label">Filière:</label>
+        <select id="filiere" class="form-select">
+          <option>TS-infrasctructure digitale</option>
+          <option>TS-Développement Digital(Diplomante)</option>
+          <option>T-Agent Technique de Vente</option>
+          <option>T-Technicien Comptable d'Entreprises</option>
+          <option>T-Technicien en Maintenance et Support Informatique et Réseaux</option>
+          <option>T-Technicien en Peinture Automobile</option>
+          <option>T-Technicien Comptable d'Entreprises</option>
+          <option>T-Techniques Habillement Production</option>
+          <option>T-Maintenance Hôtelière</option>
+          <option>T-Technicien en Modélisme Industriel</option>
+        </select>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="module" class="form-label">Module:</label>
+        <select id="module" class="form-select">
+          <option>EGTS101-Arabe</option>
+          <option>EGTS102-Français</option>
+          <option>EGTS103-Anglais technique/Espagnole</option>
+          <option>EGTS104-Culture entrepreneuriale</option>
+          <option>M102-Acquérir les bases de l'algorithmique</option>
+          <option>M103-Programmer en Orienté Objet</option>
+          <option>M104-Développer des sites web statiques</option>
+          <option>M105-Programmer en JavaScript</option>
+          <option>M106-Manipuler des bases de données</option>
+          <option>M107-Développer des sites web dynamiques</option>
+        </select>
+      </div>
+    </div>
+    
+    <hr>
+    
+    <!-- New session section -->
+    <h4 class="text-secondary text-uppercase mb-4">Nouvelle séance</h4>
+    
+    <div class="row mb-4">
+      <div class="col-md-6 mb-3">
+        <label for="objectives" class="form-label">Elts de la compétence(objectifs)* 300 caractères:</label>
+        <textarea id="objectives" class="form-control" rows="3"></textarea>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="courseType" class="form-label">Type de cours:</label>
+        <select id="courseType" class="form-select">
+          <option>cours de matin</option>
+          <option>cours de soir</option>
+        </select>
+      </div>
+    </div>
+    
+    <hr>
+    
+    <div class="row mb-4">
+      <div class="col-md-6 mb-3">
+        <label for="sessionDate" class="form-label">Date de la séance*:</label>
+        <input type="date" id="sessionDate" class="form-control">
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="absentees" class="form-label">Eff.Absents:</label>
+        <select id="absentees" class="form-select">
+          <option>0 stagiaire</option>
+          <option>1 stagiaire</option>
+          <option>2 stagiaire</option>
+          <option>3 stagiaire</option>
+          <option>4 stagiaire</option>
+          <option>5 stagiaire</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="row mb-4">
+      <div class="col-md-6 mb-3">
+        <label for="startTime" class="form-label">Heure Démarrage:</label>
+        <input type="time" id="startTime" class="form-control">
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="endTime" class="form-label">Heure Fin*:</label>
+        <input type="time" id="endTime" class="form-control">
+      </div>
+    </div>
+    
+    <hr>
+    
+    <div class="row mb-4">
+      <div class="col-md-6 mb-3">
+        <label for="comments" class="form-label">Commentaire:</label>
+        <textarea id="comments" class="form-control" rows="3"></textarea>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="absentList" class="form-label">Liste Absents:</label>
+        <textarea id="absentList" class="form-control" rows="3"></textarea>
+      </div>
+    </div>
+    
+    <div class="mb-4">
+      <label class="form-label">Type de Séance:</label>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="sessionType" id="coursRadio" checked>
+        <label class="form-check-label" for="coursRadio">Cours</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="sessionType" id="ccRadio">
+        <label class="form-check-label" for="ccRadio">CC</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="sessionType" id="efmRadio">
+        <label class="form-check-label" for="efmRadio">EFM</label>
+      </div>
+    </div>
+    
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#confirmModal">
+      Valider la séance
+    </button>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-secondary" id="confirmModalLabel">Nouvelle séance</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-2"><span class="fw-bold">Elts de la compétence:</span> <span class="text-secondary">abc</span></div>
+            <div class="mb-2"><span class="fw-bold">Mode:</span> <span class="text-secondary">Séance présentielle</span></div>
+            <div class="mb-2"><span class="fw-bold">Sous-Groupe:</span> <span class="text-secondary">DEV101</span></div>
+            <div class="mb-2"><span class="fw-bold">Date de la séance:</span> <span class="text-secondary">mardi. 10/01/2023</span></div>
+            <div class="mb-2"><span class="fw-bold">Heure Début:</span> <span class="text-secondary">8:00</span></div>
+            <div class="mb-2"><span class="fw-bold">Heure Fin:</span> <span class="text-secondary">8:30</span></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-warning btn-sm" data-bs-dismiss="modal">
+              <i class="fas fa-times"></i> Annuler
+            </button>
+            <button type="button" class="btn btn-warning btn-sm" onclick="alert('Vous êtes sûr de confirmer?')">
+              <i class="fas fa-check"></i> Confirmer
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="bg-success w-100" style="height: 10px; margin-top: -10px;"></div>
-    <h4 style="text-transform: uppercase;" class="text-secondary">Cahier de textes &verbar;<span class="text-primary">Retour</span> </h4>
-    <hr>
-    <div class="row mx-5 my-3">
-        <label for="filiere" class="col-2">Fillière:</label>
-        <select name="fi" id="filliere" class="col-4">
-            <option>TS-infrasctructure digitale</option>
-            <option>TS-Développement Digital(Diplomante)</option>
-            <option>T-Agent Technique de Vente </option>
-            <option>T-Technicien Comptable d'Entreprises </option>
-            <option>T-Technicien en  Maintenance et Support Informatique et Réseaux </option>
-            <option>T-Technicien en  Peinture Automobile </option>
-            <option>T-Technicien Comptable d'Entreprises </option>
-            <option>T-Techniques Habillement Production </option>
-            <option>T-Maintenance Hôtelière</option>
-            <option>T-Technicien en  Modélisme Industriel </option>
-        </select>
-        <label for="Module" class="col-2">Module:</label>
-        <select name="fi" id="Module" class="col-4">
-            <option>EGTS101-Arabe</option>
-            <option>EGTS102-Français</option>
-            <option>EGTS103-Anglais technique/Espagnole</option>
-            <option>EGTS104-Culture entrepreneuriale</option>
-            <option>M102-Acquérir les bases de l’algorithmique</option>
-            <option>M103-Programmer en Orienté Objet</option>
-            <option>M104-Développer des sites web statiques</option>
-            <option>M105-Programmer en JavaScript</option>
-            <option>M106-Manipuler des bases de données</option>
-            <option>M107-Développer des sites web dynamiques</option>
-        </select>
-        <hr class="mt-5">
-    </div>
-    <h4 style="text-transform: uppercase;" class="text-secondary">Nouvelle séance</h4>
-    <div class="row my-3">
-        <label class="col-2">Elts de la compétence(objectifs)* 300 caractères:</label>
-        <textarea class="col-4"></textarea>
-        <label class="col-2">Type de cours:</label>
-        <select class="col-4 h-25">
-            <option>cours de matain</option>
-            <option>cours de soir</option>
-        </select>
-        <hr>
-    </div>
-    <div class="row my-3">
-        <label class="col-2">Date de la séance*:</label>
-        <input type="date" class="col-4">
-        <label class="col-2">Eff.Absents</label>
-        <select class="col-4 h-25">
-            <option>0 stagiaire</option>
-            <option>1 stagiaire</option>
-            <option>2 stagiaire</option>
-            <option>3 stagiaire</option>
-            <option>4 stagiaire</option>
-            <option>5 stagiaire</option>
-        </select>
-    </div>
-    <div class=" row my-3">
-        <label class="col-2">Heure Démmarage:</label>
-        <input type="datetime" class="col-4">
-        <label class="col-2">Heure Fin*:</label>
-       <input type="datetime" class="col-4">
-    </div>
-    <hr>
-    <div class="row my-3">
-        <label class="col-2">Commentaire:</label>
-        <textarea class="col-4"></textarea>
-        <label class="col-2">Liste Absents:</label>
-        <textarea class="col-4"></textarea>
-    </div>
-        <label>Type de Séance:</label>&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="radio"  name="Cours">Cours&nbsp;&nbsp;
-        <input type="radio"  name="Cours">CC &nbsp;&nbsp;
-        <input type="radio"  name="Cours">EFM <br><br>
-        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#m">Valider la séance</button>
-        <div id="m" class="modal">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header ">
-                <h2 class="text-secondary">Nouvelle séance</h2>
-                <button class="btn-close btn-danger" data-bs-dismiss="modal"></button>
-              </div>
-              <div class="modal-body">
-               <form>
-                 <div><span class="fw-bold">Elts de la compétence</span>&colon;&nbsp;&nbsp;<span class="text-secondary">abc</span></div>
-                 <div><span class="fw-bold">Mode</span>&colon;&nbsp;&nbsp;<span class="text-secondary">Séance présentielle</span></div>
-                 <div><span class="fw-bold">Sous-Groupe</span>&colon;&nbsp;&nbsp;<span class="text-secondary">DEV101</span></div>
-                 <div><span class="fw-bold">Date de la séance</span>&colon;&nbsp;&nbsp;<span class="text-secondary">mardi. 10/01/2023</span></div>
-                 <div><span class="fw-bold">Heure Début</span>&colon;&nbsp;&nbsp;<span class="text-secondary">8:00</span></div>
-                 <div><span class="fw-bold">Heure Fin</span>&colon;&nbsp;&nbsp;<span class="text-secondary">8:30</span></div>
-                <div class="modal-footer my-3">
-                  <div class="mt-3">
-                    <button class="btn btn-sm btn-warning" data-bs-dismiss="modal"> <i class="fa fa-xmark"></i>  Annuler</button>
-                    <button class="btn btn-sm btn-warning" onclick="alert('vous etes sur de confirmer?')"> <i class="fa fa-check"></i> Confirmer</button>
-                    </div>
-                </div>
-              </form>
-            </div>
-</body>
-</html>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
