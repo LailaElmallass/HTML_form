@@ -23,7 +23,7 @@ A responsive web application for Institut Specialisé de Technologie Appliquée 
 
 ## Special Thanks
 
-Special thanks to [Laila El Mallass](https://github.com/LailaElmallass) for her valuable contributions to this project.
+Special thanks to [Karima Benihda](https://github.com/karimabenihda) for her valuable contributions to this project.
 
 ## License
 
